@@ -1,0 +1,211 @@
+/* Base styles */
+:root {
+    --color-paper: #f0e6d2;
+    --color-ink: #2b2b2b;
+    --color-accent: #8b6b4c;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-map-border: #8b6b4c;
+    --font-header: 'Special Elite', cursive;
+    --font-body: 'Crimson Pro', Georgia, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgba(240, 230, 210, 0.8);
+    box-shadow: 0 2px 8px var(--color-shadow);
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    color: var(--color-ink);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-divider {
+    height: 2px;
+    background-color: var(--color-accent);
+    width: 80%;
+    max-width: 300px;
+    margin: 0.5rem auto 0;
+    opacity: 0.7;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    position: relative;
+}
+
+/* Map styles */
+#map {
+    height: calc(100vh - 150px);
+    width: 100%;
+    border: 8px solid var(--color-map-border);
+    border-radius: 2px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+/* Info panel styles */
+#info-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    background-color: rgba(240, 230, 210, 0.95);
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    box-shadow: 4px 4px 12px var(--color-shadow);
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: top right;
+}
+
+#info-panel.hidden {
+    transform: scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel-header {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--color-accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h2 {
+    font-family: var(--font-header);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+#close-panel {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-ink);
+}
+
+.panel-content {
+    padding: 1rem;
+}
+
+.date-stamp {
+    font-family: var(--font-header);
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--color-accent);
+    display: inline-block;
+}
+
+/* Location photo styles */
+.location-photo-container {
+    margin: 0.8rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.location-photo {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid white;
+    box-shadow: 0 2px 6px var(--color-shadow);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+    filter: sepia(20%);
+}
+
+.location-photo:hover {
+    transform: rotate(0deg) scale(1.02);
+    filter: sepia(10%);
+}
+
+/* Footer styles */
+footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    background-color: rgba(240, 230, 210, 0.8);
+    border-top: 1px solid var(--color-accent);
+}
+
+/* Custom Leaflet marker styles */
+.custom-marker-icon {
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-ink);
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    #info-panel {
+        width: 85%;
+        max-width: 320px;
+        top: 10px;
+        right: 10px;
+    }
+    
+    #map {
+        height: calc(100vh - 120px);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #info-panel {
+        width: 90%;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .location-photo {
+        border-width: 3px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWII Journey Mapper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WWII Journey Mapper</h1>
+            <div class="header-divider"></div>
+        </header>
+        
+        <main>
+            <div id="map"></div>
+            
+            <div id="info-panel" class="hidden">
+                <div class="panel-header">
+                    <h2 id="location-title">Location Details</h2>
+                    <button id="close-panel">&times;</button>
+                </div>
+                <div class="panel-content">
+                    <div class="date-stamp" id="location-date">Date: Unknown</div>
+                    <div class="location-photo-container">
+                        <img id="location-photo" src="/placeholder.svg" alt="Historical photo" class="location-photo">
+                    </div>
+                    <p id="location-description">Select a location on the map to view details.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>WWII Journey Mapper &copy; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Journey data -->
+    <script src="journey.js"></script>
+    
+    <!-- Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <!-- Main application script -->
+    <script src="app.js"></script>
+</body>
+</html>

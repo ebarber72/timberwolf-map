@@ -1,91 +1,205 @@
 // WWII Journey Data
 const journeyData = [
     {
-        name: "Pearl Harbor",
-        lat: 21.3478,
-        lng: -157.9383,
-        date: "December 7, 1941",
-        description: "The surprise attack by Japanese forces on the US naval base at Pearl Harbor, which led to the United States' entry into World War II.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/USS_ARIZONA_burning-Pearl_Harbor.jpg/320px-USS_ARIZONA_burning-Pearl_Harbor.jpg"
-    },
-    {
-        name: "Battle of Midway",
-        lat: 28.2101,
-        lng: -177.3761,
-        date: "June 4-7, 1942",
-        description: "A decisive naval battle in which the United States Navy defeated a Japanese attack against Midway Atoll, marking a turning point in the Pacific War.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Battle_of_Midway_moment_of_victory.jpg/320px-Battle_of_Midway_moment_of_victory.jpg"
-    },
-    {
-        name: "Operation Torch",
-        lat: 35.7595,
-        lng: -5.8340,
-        date: "November 8-16, 1942",
-        description: "The Anglo-American invasion of French North Africa during the North African Campaign, opening a second front against Axis forces.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Landing_craft_taking_American_troops_ashore_at_Fedala%2C_French_Morocco%2C_during_Operation_Torch.jpg/320px-Landing_craft_taking_American_troops_ashore_at_Fedala%2C_French_Morocco%2C_during_Operation_Torch.jpg"
-    },
-    {
-        name: "Stalingrad",
-        lat: 48.7080,
-        lng: 44.5133,
-        date: "August 23, 1942 - February 2, 1943",
-        description: "A major battle on the Eastern Front, marked by fierce close-quarters combat and the Soviet victory that turned the tide of the war against Nazi Germany.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/RIAN_archive_44732_Soviet_soldiers_attack_house.jpg/320px-RIAN_archive_44732_Soviet_soldiers_attack_house.jpg"
-    },
-    {
-        name: "D-Day Landing - Normandy",
-        lat: 49.3677,
-        lng: -0.8738,
-        date: "June 6, 1944",
-        description: "Allied forces landed on the beaches of Normandy in the largest seaborne invasion in history, beginning the liberation of Western Europe.",
-        image: "images/cherbourg.jpg"
-    },
-    {
-        name: "Battle of the Bulge",
-        lat: 50.2502,
-        lng: 5.6667,
-        date: "December 16, 1944 - January 25, 1945",
-        description: "The last major German offensive on the Western Front, attempting to split the Allied forces and capture Antwerp.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bastogne1944.jpg/320px-Bastogne1944.jpg"
-    },
-    {
-        name: "Liberation of Paris",
-        lat: 48.8566,
-        lng: 2.3522,
-        date: "August 25, 1944",
-        description: "The liberation of Paris by the French 2nd Armored Division and the U.S. 4th Infantry Division.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg/320px-Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg"
-    },
-    {
-        name: "Battle of Berlin",
-        lat: 52.5200,
-        lng: 13.4050,
-        date: "April 16 - May 2, 1945",
-        description: "The final major offensive of the European theatre, resulting in the capture of Berlin and Hitler's suicide.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Reichstag_after_the_allied_bombing_of_Berlin.jpg/320px-Reichstag_after_the_allied_bombing_of_Berlin.jpg"
-    },
-    {
-        name: "VE Day - Reims",
-        lat: 49.2583,
-        lng: 4.0317,
-        date: "May 8, 1945",
-        description: "Victory in Europe Day marks the formal acceptance by the Allies of Nazi Germany's unconditional surrender.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/German_surrender_at_Reims_%28May_1945%29.jpg/320px-German_surrender_at_Reims_%28May_1945%29.jpg"
-    },
-    {
-        name: "Hiroshima",
-        lat: 34.3853,
-        lng: 132.4553,
-        date: "August 6, 1945",
-        description: "The first use of an atomic bomb in warfare, dropped by the United States on the Japanese city of Hiroshima.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/320px-Atomic_bombing_of_Japan.jpg"
-    },
-    {
-        name: "VJ Day - Tokyo Bay",
-        lat: 35.4437,
-        lng: 139.6380,
-        date: "September 2, 1945",
-        description: "The formal surrender of Japan aboard the USS Missouri in Tokyo Bay, marking the end of World War II.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Surrender_of_Japan_-_USS_Missouri.jpg/320px-Surrender_of_Japan_-_USS_Missouri.jpg"
-    }
+    name: "Induction into Army",
+    lat: 39.9749972,
+    lng: -82.9900396,
+    date: "February 18, 1943",
+    description: "Inducted into the U.S. Army at Fort Hayes, Columbus, Ohio.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Fort_Hayes_Columbus_OH.jpg"
+  },
+  {
+    name: "Basic Training",
+    lat: 41.547,
+    lng: -83.015,
+    date: "July 1943",
+    description: "Completed basic training at Camp Perry, Ohio.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Camp_Perry_OH.jpg"
+  },
+  {
+    name: "Officer Candidate School",
+    lat: 32.3600,
+    lng: -84.9344,
+    date: "December 1943",
+    description: "Graduated as Second Lieutenant from OCS at Fort Benning, Georgia.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Fort_Benning_GA.jpg"
+  },
+  {
+    name: "Joined 131st Infantry",
+    lat: 32.3600,
+    lng: -84.9344,
+    date: "February 1944",
+    description: "Assigned to the 131st Infantry at Fort Benning, Georgia.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Fort_Benning_GA.jpg"
+  },
+  {
+    name: "Maneuvers with 104th Division",
+    lat: 32.6984,
+    lng: -114.6504,
+    date: "March 1944",
+    description: "Participated in maneuvers with the 104th Timberwolves Division near Yuma, Arizona.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Yuma_AZ.jpg"
+  },
+  {
+    name: "Stationed at Camp Carson",
+    lat: 38.7375,
+    lng: -104.7889,
+    date: "March 1944",
+    description: "Relocated to Camp Carson, Colorado with the division.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Camp_Carson_CO.jpg"
+  },
+  {
+    name: "Mine School Training",
+    lat: 35.3620,
+    lng: -86.2089,
+    date: "July 1944",
+    description: "Attended Second Army Mine School at Camp Forrest, Tennessee.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Camp_Forrest_TN.jpg"
+  },
+  {
+    name: "Staging at Camp Kilmer",
+    lat: 40.5167,
+    lng: -74.4458,
+    date: "August 1944",
+    description: "Prepared for overseas deployment at Camp Kilmer, New Jersey.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Camp_Kilmer_NJ.jpg"
+  },
+  {
+    name: "Departure to Europe",
+    lat: 40.5167,
+    lng: -74.4458,
+    date: "August 1944",
+    description: "Shipped out aboard the captured German liner LA JEUNA in a 30-ship convoy.",
+    image: "images/lejeune.jpg"
+  },
+  {
+    name: "Landing at Cherbourg",
+    lat: 49.6398,
+    lng: -1.6164,
+    date: "September 1944",
+    description: "Arrived in Cherbourg, France after an 11-day voyage.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cherbourg_France.jpg"
+  },
+  {
+    name: "Staging in Cologne",
+    lat: 50.9375,
+    lng: 6.9603,
+    date: "September 1944",
+    description: "Moved to staging area in Cologne, France.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Cologne_France.jpg"
+  },
+  {
+    name: "Stationed at Barneville",
+    lat: 49.3833,
+    lng: -1.7500,
+    date: "October 1944",
+    description: "Stationed in Barneville, France on the English Channel.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Barneville_France.jpg"
+  },
+  {
+    name: "Relieved British Division",
+    lat: 50.4670,
+    lng: 4.7830,
+    date: "October 1944",
+    description: "Relieved a British Division in Como, Belgium.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Como_Belgium.jpg"
+  },
+  {
+    name: "Combat in Belgium and Holland",
+    lat: 50.8503,
+    lng: 4.3517,
+    date: "November 1944",
+    description: "Fought alongside Canadian First Army in Belgium and Holland to Maas River.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Belgium_Holland_WWII.jpg"
+  },
+  {
+    name: "Wounded in Action",
+    lat: 50.7756,
+    lng: 6.0836,
+    date: "November 3, 1944",
+    description: "Earned first Purple Heart for bullet injury to forehead.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"
+  },
+  {
+    name: "Battle at Crucifix Hill",
+    lat: 50.7756,
+    lng: 6.0836,
+    date: "Late November 1944",
+    description: "Relieved the 1st Division on Crucifix Hill in Aachen, Germany.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"
+  },
+  {
+    name: "Promotion to 1st Lieutenant",
+    lat: 50.7756,
+    lng: 6.0836,
+    date: "November 1944",
+    description: "Promoted to First Lieutenant in Aachen, Germany.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"
+  },
+  {
+    name: "Silver Star Award",
+    lat: 50.7756,
+    lng: 6.0836,
+    date: "November 28, 1944",
+    description: "Decorated with Silver Star for gallantry in action.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"
+  },
+  {
+    name: "Second Purple Heart",
+    lat: 50.2670,
+    lng: 6.6830,
+    date: "December 1944",
+    description: "Received Purple Heart for shrapnel wound in Lammersdorf, Germany.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/Lammersdorf_Germany.jpg"
+  },
+  {
+    name: "Capture of Cologne",
+    lat: 50.9375,
+    lng: 6.9603,
+    date: "March 1945",
+    description: "Participated in the capture of Cologne, France.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Cologne_France.jpg"
+  },
+  {
+    name: "Crossed the Rhine",
+    lat: 50.6434,
+    lng: 7.2278,
+    date: "March 22, 1945",
+    description: "Crossed the Rhine at Honnef, Germany.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Honnef_Germany.jpg"
+  },
+  {
+    name: "Advance to Mulde River",
+    lat: 51.8680,
+    lng: 12.2250,
+    date: "April 1945",
+    description: "Fought to the Mulde River in Germany.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mulde_River_Germany.jpg"
+  },
+  {
+    name: "Contact Patrol Mission",
+    lat: 51.8680,
+    lng: 12.2250,
+    date: "April 25, 1945",
+    description: "Volunteered for 20-mile contact patrol to meet Russian Army; captured and escaped.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mulde_River_Germany.jpg"
+  },
+  {
+    name: "Met Russian Forces",
+    lat: 52.0000,
+    lng: 11.0000,
+    date: "April 27, 1945",
+    description: "Met Russian forces near the Elbe River.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Elbe_River_Germany.jpg"
+  },
+  {
+    name: "Victory in Europe Day",
+    lat: 52.0000,
+    lng: 11.0000,
+    date: "May 8, 1945",
+    description: "Celebrated V-E Day, marking the end of WWII in Europe.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Elbe_River_Germany.jpg"
+  }
 ];
+
+window.journeyData = journeyData;

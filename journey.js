@@ -62,14 +62,14 @@ const journeyData = [
     lng: -74.4458,
     date: "August 1944",
     description: "Prepared for overseas deployment at Camp Kilmer, New Jersey.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Camp_Kilmer_NJ.jpg"
+    image: "https://njdigitalhighway.org/sites/default/files/styles/large/public/2023-02/kilmer2.jpg?itok=13Ask3NT"
   },
   {
     name: "Departure to Europe",
-    lat: 40.5167,
-    lng: -74.4458,
+    lat: 40.5909996,
+    lng: -73.8909988,
     date: "August 1944",
-    description: "Shipped out aboard the captured German liner LA JEUNA in a 30-ship convoy.",
+    description: "Shipped out aboard the USS Lejeune in a 30-ship convoy.",
     image: "images/lejeune.jpg"
   },
   {
@@ -81,11 +81,11 @@ const journeyData = [
     image: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cherbourg_France.jpg"
   },
   {
-    name: "Staging in Cologne",
-    lat: 50.9375,
-    lng: 6.9603,
+    name: "Staging in Valognes",
+    lat: 49.5100,
+    lng: -1.4700,
     date: "September 1944",
-    description: "Moved to staging area in Cologne, France.",
+    description: "Moved to staging area in Valognes, France.",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Cologne_France.jpg"
   },
   {

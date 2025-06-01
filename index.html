@@ -13,11 +13,26 @@
 <body>
     <div class="container">
         <header>
-            <h1>CAPT ROBERT BARTLETT'S WWII JOURNEY</h1>
-            <div class="header-divider"></div>
+            <div class="header-content">
+                <div class="headshot-container">
+                    <img src="images/1944 Robert Bartlett.jpeg" alt="Captain Robert Bartlett, 1944" class="headshot">
+                </div>
+                <div class="title-container">
+                    <h1>CAPT ROBERT BARTLETT'S WWII JOURNEY</h1>
+                    <div class="header-divider"></div>
+                </div>
+            </div>
         </header>
         
         <main>
+            <div class="map-navigation">
+                <span class="nav-label">Jump to:</span>
+                <div class="jump-buttons">
+                    <button id="jump-to-start" class="jump-btn">Entering the Army</button>
+                    <button id="jump-to-cherbourg" class="jump-btn">Entering the War</button>
+                    <button id="jump-to-russians" class="jump-btn">Meeting the Russians</button>
+                </div>
+            </div>
             <div id="map"></div>
             
             <div id="info-panel" class="hidden">
@@ -27,10 +42,20 @@
                 </div>
                 <div class="panel-content">
                     <div class="date-stamp" id="location-date">Date: Unknown</div>
-                    <div class="location-photo-container">
-                        <img id="location-photo" src="/placeholder.svg" alt="Historical photo" class="location-photo">
+                    <div class="photo-gallery">
+                        <div class="gallery-container" id="photo-gallery-container">
+                            <!-- Photos will be inserted here -->
+                        </div>
+                        <div class="gallery-nav">
+                            <button id="prev-photo" class="gallery-nav-btn">&lt;</button>
+                            <span id="photo-counter">1/1</span>
+                            <button id="next-photo" class="gallery-nav-btn">&gt;</button>
+                        </div>
                     </div>
                     <p id="location-description">Select a location on the map to view details.</p>
+                    <div class="navigation-buttons">
+                        <button id="next-location-btn">Continue to Next Location &rarr;</button>
+                    </div>
                 </div>
             </div>
         </main>

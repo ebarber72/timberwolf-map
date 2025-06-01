@@ -24,20 +24,48 @@ body {
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1800px;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 /* Header styles */
 header {
     padding: 1.5rem;
-    text-align: center;
     background-color: rgba(240, 230, 210, 0.8);
     box-shadow: 0 2px 8px var(--color-shadow);
     position: relative;
     z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headshot-container {
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.headshot {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 2px 6px var(--color-shadow);
+    filter: sepia(20%);
+}
+
+.title-container {
+    text-align: left;
 }
 
 h1 {
@@ -61,15 +89,69 @@ h1 {
 main {
     flex: 1;
     position: relative;
+    padding: 0 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Map navigation styles */
+.map-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: rgba(240, 230, 210, 0.8);
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    text-align: center;
+}
+
+.nav-label {
+    font-family: var(--font-header);
+    margin-right: 1rem;
+    color: var(--color-ink);
+    font-size: 0.95rem;
+}
+
+.jump-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.jump-btn {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-header);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.jump-btn:hover {
+    background-color: var(--color-ink);
+    transform: translateY(-2px);
+}
+
+.jump-btn:active {
+    transform: translateY(0);
 }
 
 /* Map styles */
 #map {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 200px); /* Adjusted to account for the navigation buttons */
     width: 100%;
     border: 8px solid var(--color-map-border);
     border-radius: 2px;
     box-shadow: 0 4px 12px var(--color-shadow);
+    margin: 0 auto;
 }
 
 /* Info panel styles */
@@ -129,16 +211,23 @@ main {
     display: inline-block;
 }
 
-/* Location photo styles */
-.location-photo-container {
+/* Photo gallery styles */
+.photo-gallery {
     margin: 0.8rem 0;
     text-align: center;
     position: relative;
 }
 
+.gallery-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
 .location-photo {
     max-width: 100%;
     height: auto;
+    max-height: 200px;
     border: 5px solid white;
     box-shadow: 0 2px 6px var(--color-shadow);
     transform: rotate(-1deg);
@@ -149,6 +238,73 @@ main {
 .location-photo:hover {
     transform: rotate(0deg) scale(1.02);
     filter: sepia(10%);
+}
+
+.gallery-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.gallery-nav-btn {
+    background: var(--color-accent);
+    color: var(--color-paper);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-nav-btn:hover {
+    background-color: var(--color-ink);
+}
+
+.gallery-nav-btn:disabled {
+    background-color: #ccbea8;
+    cursor: not-allowed;
+}
+
+#photo-counter {
+    font-family: var(--font-header);
+    font-size: 0.9rem;
+    color: var(--color-accent);
+}
+
+/* Navigation button styles */
+.navigation-buttons {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#next-location-btn {
+    background-color: var(--color-accent);
+    color: var(--color-paper);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-header);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+#next-location-btn:hover {
+    background-color: var(--color-ink);
+    transform: translateY(-2px);
+}
+
+#next-location-btn:active {
+    transform: translateY(0);
 }
 
 /* Footer styles */
@@ -163,19 +319,89 @@ footer {
 
 /* Custom Leaflet marker styles */
 .custom-marker-icon {
+    background: none;
+    border: none;
+}
+
+.custom-marker-icon .pin-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-marker-icon .pin {
     background-color: var(--color-accent);
-    border: 2px solid var(--color-ink);
-    border-radius: 50%;
-    text-align: center;
+    border: 2px solid white;
+    border-radius: 50% 50% 50% 0;
+    height: 30px;
+    width: 30px;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 5px;
+    top: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.custom-marker-icon:hover .pin {
+    background-color: var(--color-ink);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transform: rotate(-45deg) scale(1.1);
+}
+
+.custom-marker-icon .pin-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-weight: bold;
-    box-shadow: 2px 2px 4px var(--color-shadow);
+    transform: translateY(-5px);
+}
+
+.marker-highlight {
+    filter: brightness(1.5) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+    transition: all 0.3s ease;
+    transform: scale(1.3);
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .headshot-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .title-container {
+        text-align: center;
+    }
+    
+    .map-navigation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .nav-label {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .jump-buttons {
+        width: 100%;
+        justify-content: center;
     }
     
     #info-panel {
@@ -186,7 +412,11 @@ footer {
     }
     
     #map {
-        height: calc(100vh - 120px);
+        height: calc(100vh - 150px);
+    }
+    
+    main {
+        padding: 0 1rem;
     }
 }
 
@@ -195,8 +425,18 @@ footer {
         padding: 1rem;
     }
     
+    .headshot {
+        width: 80px;
+        height: 80px;
+    }
+    
     h1 {
         font-size: 1.5rem;
+    }
+    
+    .jump-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
     
     #info-panel {

@@ -43,6 +43,14 @@ const prevPhotoBtn = document.getElementById('prev-photo');
 const nextPhotoBtn = document.getElementById('next-photo');
 const nextLocationBtn = document.getElementById('next-location-btn');
 
+// Modal elements
+const imageModalOverlay = document.getElementById('image-modal-overlay');
+const modalImage = document.getElementById('modal-image');
+const modalClose = document.getElementById('modal-close');
+const modalPrev = document.getElementById('modal-prev');
+const modalNext = document.getElementById('modal-next');
+const modalCounter = document.getElementById('modal-counter');
+
 // Event listeners
 closeButton.addEventListener('click', () => {
     infoPanel.classList.add('hidden');
@@ -66,6 +74,67 @@ nextPhotoBtn.addEventListener('click', () => {
 
 // Next location navigation event
 nextLocationBtn.addEventListener('click', navigateToNextLocation);
+
+// Modal event listeners
+modalClose.addEventListener('click', closeImageModal);
+imageModalOverlay.addEventListener('click', (e) => {
+    // Close only if clicking outside the image modal
+    if (e.target === imageModalOverlay) {
+        closeImageModal();
+    }
+});
+
+// Modal navigation buttons
+modalPrev.addEventListener('click', () => {
+    const images = currentLocation.images || (currentLocation.image ? [currentLocation.image] : []);
+    if (currentPhotoIndex > 0) {
+        currentPhotoIndex--;
+        updatePhotoGallery();
+        updateModalImage();
+    }
+});
+
+modalNext.addEventListener('click', () => {
+    const images = currentLocation.images || (currentLocation.image ? [currentLocation.image] : []);
+    if (currentPhotoIndex < images.length - 1) {
+        currentPhotoIndex++;
+        updatePhotoGallery();
+        updateModalImage();
+    }
+});
+
+// Function to open the image modal with the current photo
+function openImageModal() {
+    const images = currentLocation.images || (currentLocation.image ? [currentLocation.image] : []);
+    if (images.length === 0) return;
+    
+    updateModalImage();
+    imageModalOverlay.classList.add('active');
+    
+    // Prevent scrolling the body when the modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+// Function to close the image modal
+function closeImageModal() {
+    imageModalOverlay.classList.remove('active');
+    // Restore scrolling
+    document.body.style.overflow = '';
+}
+
+// Function to update the modal image
+function updateModalImage() {
+    const images = currentLocation.images || (currentLocation.image ? [currentLocation.image] : []);
+    if (images.length === 0) return;
+    
+    modalImage.src = images[currentPhotoIndex];
+    modalImage.alt = `Historical photo of ${currentLocation.name}`;
+    
+    // Update counter and button states in modal
+    modalCounter.textContent = `${currentPhotoIndex + 1}/${images.length}`;
+    modalPrev.disabled = currentPhotoIndex === 0;
+    modalNext.disabled = currentPhotoIndex === images.length - 1;
+}
 
 // Function to fly to a specific location by index
 function flyToLocationByIndex(index) {
@@ -207,6 +276,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize the map with journey data
     initializeJourneyMap(journeyData);
+    
+    // Add keyboard navigation for modal
+    document.addEventListener('keydown', (e) => {
+        // If modal is active
+        if (imageModalOverlay.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            } else if (e.key === 'ArrowLeft' && !modalPrev.disabled) {
+                modalPrev.click();
+            } else if (e.key === 'ArrowRight' && !modalNext.disabled) {
+                modalNext.click();
+            } else if (e.key === ' ' || e.key === 'Enter') {
+                // Space or Enter also close the modal for accessibility
+                closeImageModal();
+            }
+        }
+    });
 });
 
 // Create a custom icon for markers
@@ -290,12 +376,27 @@ function updatePhotoGallery() {
         return;
     }
     
+    // Create container for the photo and the magnify icon
+    const photoContainer = document.createElement('div');
+    photoContainer.style.position = 'relative';
+    
     // Create and add the current image
     const img = document.createElement('img');
     img.src = images[currentPhotoIndex];
     img.alt = `Historical photo of ${currentLocation.name}`;
     img.className = 'location-photo';
-    galleryContainer.appendChild(img);
+    img.addEventListener('click', openImageModal); // Allow clicking the image to also open modal
+    photoContainer.appendChild(img);
+    
+    // Add magnify icon
+    const magnifyIcon = document.createElement('div');
+    magnifyIcon.className = 'magnify-icon';
+    magnifyIcon.title = 'Click to enlarge';
+    magnifyIcon.addEventListener('click', openImageModal);
+    photoContainer.appendChild(magnifyIcon);
+    
+    // Add the container to the gallery
+    galleryContainer.appendChild(photoContainer);
     
     // Update counter and button states
     photoCounter.textContent = `${currentPhotoIndex + 1}/${images.length}`;

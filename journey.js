@@ -41,7 +41,7 @@ const journeyData = [
     lng: -104.7889,
     date: "March 1944",
     description: "Relocated to Camp Carson, Colorado with the division.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6f/Camp_Carson_CO.jpg"]
+    images: ["images/Colorado-1.jpg"]
   },
   {
     name: "Mine School Training",

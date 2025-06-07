@@ -401,17 +401,20 @@ function updatePhotoGallery() {
     galleryContainer.appendChild(photoContainer);
     
     // Update counter and button states
-    photoCounter.textContent = `${currentPhotoIndex + 1}/${images.length}`;
     if (images.length > 1) {
+        photoCounter.textContent = `${currentPhotoIndex + 1}/${images.length}`;
         prevPhotoBtn.disabled = currentPhotoIndex === 0;
         nextPhotoBtn.disabled = currentPhotoIndex === images.length - 1;
         prevPhotoBtn.style.display = '';
         nextPhotoBtn.style.display = '';
+        photoCounter.style.display = '';
     } else {
+        photoCounter.textContent = '';
         prevPhotoBtn.disabled = true;
         nextPhotoBtn.disabled = true;
         prevPhotoBtn.style.display = 'none';
         nextPhotoBtn.style.display = 'none';
+        photoCounter.style.display = 'none';
     }
 }
 

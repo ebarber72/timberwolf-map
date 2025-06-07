@@ -64,7 +64,7 @@ const journeyData = [
     lng: -73.8909988,
     date: "August 1944",
     description: "Shipped out aboard the USS Lejeune in a 30-ship convoy.",
-    images: ["images/lejeune.jpg", "https://www.history.navy.mil/content/history/museums/nmusn/explore/photography/wwii/wwii-atlantic/battle-of-the-atlantic/convoys/jcr:content/mediaitem/image.img.jpg/1448912373473.jpg"]
+    images: ["images/lejeune.jpg"]
   },
   {
     name: "Landing at Cherbourg",
@@ -72,7 +72,7 @@ const journeyData = [
     lng: -1.6164,
     date: "September 1944",
     description: "Arrived in Cherbourg, France after an 11-day voyage.",
-    images: ["images/cherbourg.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/2f/Cherbourg_France.jpg"]
+    images: ["images/cherbourg.jpg"]
   },
   {
     name: "Staging in Valognes",
@@ -80,7 +80,7 @@ const journeyData = [
     lng: -1.4700,
     date: "September 1944",
     description: "Moved to staging area in Valognes, France.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/4/4e/Cologne_France.jpg"]
+    images: ["valognes.jpeg"]
   },
   {
     name: "Stationed at Barneville",
@@ -88,14 +88,14 @@ const journeyData = [
     lng: -1.7500,
     date: "October 1944",
     description: "Stationed in Barneville, France on the English Channel.",
-    images: ["images/Barneville-France.jpeg", "https://upload.wikimedia.org/wikipedia/commons/5/5f/Barneville_France.jpg"]
+    images: ["images/Barneville-France.jpg"]
   },
   {
     name: "Relieved British Division",
     lat: 50.4670,
     lng: 4.7830,
     date: "October 1944",
-    description: "Relieved a British Division in Como, Belgium.",
+    description: "Relieved a British Division in Belgium.",
     images: ["https://upload.wikimedia.org/wikipedia/commons/6/6e/Como_Belgium.jpg"]
   },
   {

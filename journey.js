@@ -179,7 +179,7 @@ const journeyData = [
     lng: 12.2250,
     date: "April 25, 1945",
     description: "Volunteered for 20-mile contact patrol to meet Russian Army; captured and escaped.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2a/Mulde_River_Germany.jpg"]
+    images: ["images/Dommitzch-Kreis-Torgau.jpg","images/leading-patrol.jpg"]
   },
   {
     name: "Met Russian Forces",
@@ -187,7 +187,7 @@ const journeyData = [
     lng: 11.0000,
     date: "April 27, 1945",
     description: "Met Russian forces near the Elbe River.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1a/Elbe_River_Germany.jpg"]
+    images: ["images/Lt Bartlett handshake with Russian General vs.jpeg"]
   },
   {
     name: "Victory in Europe Day",
@@ -195,7 +195,7 @@ const journeyData = [
     lng: 11.0000,
     date: "May 8, 1945",
     description: "Celebrated V-E Day, marking the end of WWII in Europe.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/1/1a/Elbe_River_Germany.jpg"]
+    images: ["images/Timberwolf Parade 1945.jpg"]
   }
 ];
 

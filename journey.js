@@ -144,7 +144,7 @@ const journeyData = [
     lng: 6.6830,
     date: "December 1944",
     description: "Received Purple Heart for shrapnel wound in Lammersdorf, Germany.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/9/9f/Lammersdorf_Germany.jpg"]
+    images: ["images/1945-03-22-Purple-Heart.jpeg"]
   },
   {
     name: "Capture of Cologne",
@@ -161,8 +161,8 @@ const journeyData = [
     date: "March 22, 1945",
     description: "Crossed the Rhine at Honnef, Germany.",
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/3/3d/Honnef_Germany.jpg",
-      "https://www.usace.army.mil/portals/2/docs/research/World%20War%20II/Building%20Bridges%20-%20Engineers%20Cross%20Rhine.jpg?ver=2017-03-21-172924-527"
+      "https://warfarehistorynetwork.com/wp-content/uploads/2023/05/Q-Sum23-Rhine-Cross-6.jpg",
+      "https://warfarehistorynetwork.com/wp-content/uploads/2003/05/Q-Sum23-Rhine-Cross-8-e1684245171363.jpg"
     ]
   },
   {
@@ -175,19 +175,19 @@ const journeyData = [
   },
   {
     name: "Contact Patrol Mission",
-    lat: 51.8680,
-    lng: 12.2250,
+    lat: 51.64334810513766,
+    lng: 12.879729690104488,
     date: "April 25, 1945",
     description: "Volunteered for 20-mile contact patrol to meet Russian Army; captured and escaped.",
     images: ["images/Dommitzch-Kreis-Torgau.jpg","images/leading-patrol.jpg"]
   },
   {
     name: "Met Russian Forces",
-    lat: 52.0000,
-    lng: 11.0000,
+    lat: 51.57719432816764,
+    lng: 13.015412183223551,
     date: "April 27, 1945",
     description: "Met Russian forces near the Elbe River.",
-    images: ["images/Lt Bartlett handshake with Russian General vs.jpeg"]
+    images: ["images/Lt Bartlett handshake with Russian General v2.jpeg"]
   },
   {
     name: "Victory in Europe Day",

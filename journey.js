@@ -6,7 +6,7 @@ const journeyData = [
     lng: -82.98990140738344,
     date: "February 18, 1943",
     description: "Inducted into the U.S. Army at Fort Hayes, Columbus, Ohio.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6b/Fort_Hayes_Columbus_OH.jpg"]
+    images: ["images/in-uniform.jpeg"]
   },
   {
     name: "Basic Training",
@@ -15,8 +15,7 @@ const journeyData = [
     date: "July 1943",
     description: "Completed basic training at Camp Perry, Ohio.",
     images: [
-      "https://upload.wikimedia.org/wikipedia/commons/3/3d/Camp_Perry_OH.jpg",
-      "https://ohiohistorycentral.org/images/5/5f/Camp_Perry.jpg"
+      "images/walking-on-base.jpeg"
     ]
   },
   {
@@ -33,7 +32,7 @@ const journeyData = [
     lng: -114.6504,
     date: "March 1944",
     description: "Participated in maneuvers with the 104th Timberwolves Division near Yuma, Arizona.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/4/4b/Yuma_AZ.jpg"]
+    images: ["https://images.squarespace-cdn.com/content/v1/528d39d1e4b0d60933da00ae/1441962307773-7YWBCSFQYL5GUJKTSKSS/image-asset.jpeg?format=2500w"]
   },
   {
     name: "Stationed at Camp Carson",
@@ -49,7 +48,7 @@ const journeyData = [
     lng: -86.2089,
     date: "July 1944",
     description: "Attended Second Army Mine School at Camp Forrest, Tennessee.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/2/2d/Camp_Forrest_TN.jpg"]
+    images: ["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8OtPc9A9MlfJCX0Lz4RKm5Bo_8Va56lZ9q730AJRDOKpWaeGWUNoIFo2_PpTZq15vn-03Re3FF6IRCoAyNWeXEdDLegqAikExFvx4k7ADlmFVFTEdWsfMy0Zj95Kk7aw8ghnMKVnjQrzFJrC3xRRl9KmKcajTxpB8nyPxcxLBmNXooww7bTDhAQId/w640-h396/camp%20forrest%20entrance.jpg"]
   },
   {
     name: "Staging at Camp Kilmer",
@@ -57,7 +56,7 @@ const journeyData = [
     lng: -74.4458,
     date: "August 1944",
     description: "Prepared for overseas deployment at Camp Kilmer, New Jersey.",
-    images: ["https://njdigitalhighway.org/sites/default/files/styles/large/public/2023-02/kilmer2.jpg?itok=13Ask3NT"]
+    images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Camp_Kilmer_Map.jpg/960px-Camp_Kilmer_Map.jpg"]
   },
   {
     name: "Departure to Europe",
@@ -89,7 +88,7 @@ const journeyData = [
     lng: -1.7500,
     date: "October 1944",
     description: "Stationed in Barneville, France on the English Channel.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/5/5f/Barneville_France.jpg"]
+    images: ["images/Barneville-France.jpeg", "https://upload.wikimedia.org/wikipedia/commons/5/5f/Barneville_France.jpg"]
   },
   {
     name: "Relieved British Division",

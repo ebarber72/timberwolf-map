@@ -104,7 +104,7 @@ const journeyData = [
     lng: 4.3517,
     date: "November 1944",
     description: "Fought alongside Canadian First Army in Belgium and Holland to Maas River.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/7/7f/Belgium_Holland_WWII.jpg"]
+    images: ["images/holland-first-battle.jpg"]
   },
   {
     name: "Wounded in Action",
@@ -112,7 +112,7 @@ const journeyData = [
     lng: 6.0836,
     date: "November 3, 1944",
     description: "Earned first Purple Heart for bullet injury to forehead.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"]
+    images: ["images/1944-11-03-Purple-Heart.jpeg"]
   },
   {
     name: "Battle at Crucifix Hill",
@@ -128,7 +128,7 @@ const journeyData = [
     lng: 6.2687,
     date: "November 28, 1944",
     description: "Decorated with Silver Star for gallantry in action.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"]
+    images: ["images/Silver-Star-1944-11-28.jpg"]
   },
     {
     name: "Promotion to 1st Lieutenant",
@@ -136,7 +136,7 @@ const journeyData = [
     lng: 6.0836,
     date: "November 1944",
     description: "Promoted to First Lieutenant in Aachen, Germany.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/8/8d/Aachen_Germany.jpg"]
+    images: ["images/german-town-before-attack.jpg"]
   },
   {
     name: "Second Purple Heart",

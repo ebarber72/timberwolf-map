@@ -373,6 +373,8 @@ function updatePhotoGallery() {
         photoCounter.textContent = '0/0';
         prevPhotoBtn.disabled = true;
         nextPhotoBtn.disabled = true;
+        prevPhotoBtn.style.display = 'none';
+        nextPhotoBtn.style.display = 'none';
         return;
     }
     
@@ -400,8 +402,17 @@ function updatePhotoGallery() {
     
     // Update counter and button states
     photoCounter.textContent = `${currentPhotoIndex + 1}/${images.length}`;
-    prevPhotoBtn.disabled = currentPhotoIndex === 0;
-    nextPhotoBtn.disabled = currentPhotoIndex === images.length - 1;
+    if (images.length > 1) {
+        prevPhotoBtn.disabled = currentPhotoIndex === 0;
+        nextPhotoBtn.disabled = currentPhotoIndex === images.length - 1;
+        prevPhotoBtn.style.display = '';
+        nextPhotoBtn.style.display = '';
+    } else {
+        prevPhotoBtn.disabled = true;
+        nextPhotoBtn.disabled = true;
+        prevPhotoBtn.style.display = 'none';
+        nextPhotoBtn.style.display = 'none';
+    }
 }
 
 // Function to initialize the map with journey data

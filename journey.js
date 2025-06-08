@@ -80,7 +80,7 @@ const journeyData = [
     lng: -1.4700,
     date: "September 7, 1944",
     description: "Stationed in Valognes, France for 19 days.",
-    images: ["valognes.jpeg"]
+    images: ["images/valognes.jpeg","https://images-cdn.bridgemanimages.com/api/1.0/image/150.PNP.2658930.7055475/395383.jpg"]
   },
   {
     name: "Stationed at Barneville",
@@ -112,7 +112,7 @@ const journeyData = [
     lng: 1.3611140028452222,
     date: "October 17, 1944",
     description: "Traveled by rail from Vires to Dreux, France.",
-    images: ["images/to Dreux.jpeg","https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+    images: ["images/to Druex.jpeg","https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
   },
     {
     name: "Travel by rail to St. Quentin, France",

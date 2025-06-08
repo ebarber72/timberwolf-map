@@ -79,24 +79,64 @@ const journeyData = [
     lat: 49.5100,
     lng: -1.4700,
     date: "September 7, 1944",
-    description: "Moved to staging area in Valognes, France.",
+    description: "Stationed in Valognes, France for 19 days.",
     images: ["valognes.jpeg"]
   },
   {
     name: "Stationed at Barneville",
     lat: 49.3833,
     lng: -1.7500,
-    date: "October 1944",
-    description: "Stationed in Barneville, France on the English Channel.",
+    date: "September 26, 1944",
+    description: "Stationed in Barneville for 19 days.",
     images: ["images/Barneville-France.jpg"]
   },
-  {
-    name: "Relieved British Division",
-    lat: 50.4670,
-    lng: 4.7830,
-    date: "October 1944",
-    description: "Relieved a British Division in Belgium.",
-    images: ["https://upload.wikimedia.org/wikipedia/commons/6/6e/Como_Belgium.jpg"]
+    {
+    name: "Travel by foot and rail to Carentan",
+    lat: 49.30312635,
+    lng: -1.2481559518311396,
+    date: "October 15, 1944",
+    description: "Company F, 413th Infantry: Left Barneville for Le Haye du Puits (foot), then by rail, arrived Carentan.",
+    images: ["images/to Carentan.jpeg","https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+  },
+    {
+    name: "Travel by rail to Vires, France",
+    lat: 48.84470158709981,
+    lng: -0.8868231624710592,
+    date: "October 16, 1944",
+    description: "Traveled by rail from Carentan to Vires, France.",
+    images: ["images/to Vires.jpeg", "https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+  },
+    {
+    name: "Travel by rail to Dreux, France",
+    lat: 48.745491315660686,
+    lng: 1.3611140028452222,
+    date: "October 17, 1944",
+    description: "Traveled by rail from Vires to Dreux, France.",
+    images: ["images/to Dreux.jpeg","https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+  },
+    {
+    name: "Travel by rail to St. Quentin, France",
+    lat: 49.846844463638966,
+    lng: 3.2799219989865427,
+    date: "October 18, 1944",
+    description: "Traveled by rail from Dreux to St. Quentin, France.",
+    images: ["images/to St Quentin.jpeg","https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+  },
+    {
+    name: "Travel by rail to Vilvorde, Belgium",
+    lat: 50.924432177403816,
+    lng: 4.4249697516033,
+    date: "October 19, 1944",
+    description: "Traveled by rail from St Quentin, France to Vilvorde Belgium. Crossed into Belgium 0715.",
+    images: ["images/to Vilvorde Belgium.jpeg", "https://www.trains.com/wp-content/uploads/2020/10/wwiitroop.jpg"]
+  },
+    {
+    name: "Timberwolves enter battle in Belgium, relieving a British Division",
+    lat: 51.47466381829387,
+    lng: 4.649891193473268,
+    date: "October 23, 1944",
+    description: "This was the first time a US Army regiment relieved an Allied unit on the Western Front",
+    images: ["images/holland-first-battle.jpg"]
   },
   {
     name: "Combat in Belgium and Holland",

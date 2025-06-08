@@ -62,7 +62,7 @@ const journeyData = [
     name: "Departure to Europe",
     lat: 40.5909996,
     lng: -73.8909988,
-    date: "August 1944",
+    date: "August 28, 1944",
     description: "Shipped out aboard the USS Lejeune in a 30-ship convoy.",
     images: ["images/lejeune.jpg"]
   },
@@ -70,7 +70,7 @@ const journeyData = [
     name: "Landing at Cherbourg",
     lat: 49.6398,
     lng: -1.6164,
-    date: "September 1944",
+    date: "September 6, 1944",
     description: "Arrived in Cherbourg, France after an 11-day voyage.",
     images: ["images/cherbourg.jpg"]
   },
@@ -78,7 +78,7 @@ const journeyData = [
     name: "Staging in Valognes",
     lat: 49.5100,
     lng: -1.4700,
-    date: "September 1944",
+    date: "September 7, 1944",
     description: "Moved to staging area in Valognes, France.",
     images: ["valognes.jpeg"]
   },

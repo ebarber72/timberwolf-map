@@ -22,61 +22,244 @@
                     <div class="header-divider"></div>
                 </div>
             </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#maps" class="nav-link" data-section="maps">Maps</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#interactive-map" class="dropdown-link" data-section="maps">Interactive Journey Map</a></li>
+                            <li><a href="#battle-maps" class="dropdown-link" data-section="maps">Battle Maps</a></li>
+                            <li><a href="#route-overview" class="dropdown-link" data-section="maps">Route Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link" data-section="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#podcast" class="nav-link" data-section="podcast">Podcast</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         
         <main>
-            <div class="map-navigation">
-                <span class="nav-label">Jump to:</span>
-                <div class="jump-buttons">
-                    <button id="jump-to-start" class="jump-btn">Entering the Army</button>
-                    <button id="jump-to-cherbourg" class="jump-btn">Entering the War</button>
-                    <button id="jump-to-russians" class="jump-btn">Meeting the Russians</button>
-                </div>
-            </div>
-            <div id="map"></div>
-            
-            <div id="info-panel" class="hidden">
-                <div class="panel-header">
-                    <h2 id="location-title">Location Details</h2>
-                    <button id="close-panel">&times;</button>
-                </div>
-                <div class="panel-content">
-                    <div class="date-stamp" id="location-date">Date: Unknown</div>
-                    <div class="photo-gallery">
-                        <div class="gallery-container" id="photo-gallery-container">
-                            <!-- Photos will be inserted here -->
+            <!-- Home Section -->
+            <section id="home-section" class="content-section active">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h2>A Soldier's Journey Through History</h2>
+                            <p class="hero-description">
+                                Follow Captain Robert Bartlett's remarkable journey through World War II, 
+                                from his induction into the U.S. Army in 1943 to his historic meeting with 
+                                Russian forces at the Elbe River in 1945. Experience the courage, sacrifice, 
+                                and determination of the Greatest Generation through one man's extraordinary story.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">30+</span>
+                                    <span class="stat-label">Locations</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">2</span>
+                                    <span class="stat-label">Purple Hearts</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Silver Star</span>
+                                </div>
+                            </div>
+                            <div class="hero-buttons">
+                                <button class="cta-button primary" data-section="maps">Explore the Journey</button>
+                                <button class="cta-button secondary" data-section="gallery">View Photos</button>
+                            </div>
                         </div>
-                        <div class="gallery-nav">
-                            <button id="prev-photo" class="gallery-nav-btn">&lt;</button>
-                            <span id="photo-counter">1/1</span>
-                            <button id="next-photo" class="gallery-nav-btn">&gt;</button>
+                        <div class="hero-image">
+                            <img src="images/in-uniform.jpeg" alt="Captain Robert Bartlett in uniform" class="hero-photo">
+                            <div class="photo-caption">Captain Robert Bartlett, 1943</div>
                         </div>
                     </div>
-                    <p id="location-description">Select a location on the map to view details.</p>
-                    <div class="navigation-buttons">
-                        <button id="next-location-btn">Continue to Next Location &rarr;</button>
+                </div>
+                
+                <div class="timeline-preview">
+                    <h3>Journey Highlights</h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Feb 1943</div>
+                            <div class="timeline-content">
+                                <h4>Army Induction</h4>
+                                <p>Inducted at Fort Hayes, Columbus, Ohio</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Sep 1944</div>
+                            <div class="timeline-content">
+                                <h4>Landing at Cherbourg</h4>
+                                <p>Arrived in France to begin combat operations</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Nov 1944</div>
+                            <div class="timeline-content">
+                                <h4>Silver Star Award</h4>
+                                <p>Decorated for gallantry in action</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Apr 1945</div>
+                            <div class="timeline-content">
+                                <h4>Meeting the Russians</h4>
+                                <p>Historic contact with Soviet forces at the Elbe</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Image Modal for enlarged photos -->
-            <div id="image-modal-overlay" class="image-modal-overlay">
-                <div class="image-modal">
-                    <div class="modal-image-container">
-                        <img id="modal-image" class="modal-image" src="" alt="Enlarged historical photo">
-                        <button id="modal-close" class="modal-close">&times;</button>
-                    </div>
-                    <div class="modal-nav">
-                        <button id="modal-prev" class="modal-nav-btn">&lt;</button>
-                        <span id="modal-counter" class="modal-counter">1/1</span>
-                        <button id="modal-next" class="modal-nav-btn">&gt;</button>
+            <!-- Maps Section -->
+            <section id="maps-section" class="content-section">
+                <div class="section-header">
+                    <h2>Interactive Journey Maps</h2>
+                    <p>Explore Captain Bartlett's path through Europe with detailed maps and historical context.</p>
+                </div>
+                
+                <div class="map-navigation">
+                    <span class="nav-label">Jump to:</span>
+                    <div class="jump-buttons">
+                        <button id="jump-to-start" class="jump-btn">Entering the Army</button>
+                        <button id="jump-to-cherbourg" class="jump-btn">Entering the War</button>
+                        <button id="jump-to-russians" class="jump-btn">Meeting the Russians</button>
                     </div>
                 </div>
-            </div>
+                
+                <div id="map"></div>
+                
+                <div id="info-panel" class="hidden">
+                    <div class="panel-header">
+                        <h2 id="location-title">Location Details</h2>
+                        <button id="close-panel">&times;</button>
+                    </div>
+                    <div class="panel-content">
+                        <div class="date-stamp" id="location-date">Date: Unknown</div>
+                        <div class="photo-gallery">
+                            <div class="gallery-container" id="photo-gallery-container">
+                                <!-- Photos will be inserted here -->
+                            </div>
+                            <div class="gallery-nav">
+                                <button id="prev-photo" class="gallery-nav-btn"><</button>
+                                <span id="photo-counter">1/1</span>
+                                <button id="next-photo" class="gallery-nav-btn">></button>
+                            </div>
+                        </div>
+                        <p id="location-description">Select a location on the map to view details.</p>
+                        <div class="navigation-buttons">
+                            <button id="next-location-btn">Continue to Next Location &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Modal for enlarged photos -->
+                <div id="image-modal-overlay" class="image-modal-overlay">
+                    <div class="image-modal">
+                        <div class="modal-image-container">
+                            <img id="modal-image" class="modal-image" src="" alt="Enlarged historical photo">
+                            <button id="modal-close" class="modal-close">&times;</button>
+                        </div>
+                        <div class="modal-nav">
+                            <button id="modal-prev" class="modal-nav-btn"><</button>
+                            <span id="modal-counter" class="modal-counter">1/1</span>
+                            <button id="modal-next" class="modal-nav-btn">></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="gallery-section" class="content-section">
+                <div class="section-header">
+                    <h2>Photo Gallery</h2>
+                    <p>A visual chronicle of Captain Bartlett's World War II service and the places he served.</p>
+                </div>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="portraits">Portraits</button>
+                    <button class="filter-btn" data-filter="locations">Locations</button>
+                    <button class="filter-btn" data-filter="documents">Documents</button>
+                </div>
+                
+                <div class="photo-grid" id="photo-grid">
+                    <!-- Photos will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Podcast Section -->
+            <section id="podcast-section" class="content-section">
+                <div class="section-header">
+                    <h2>The Captain's Story Podcast</h2>
+                    <p>Listen to the complete story of Captain Robert Bartlett's World War II journey, told through interviews, historical context, and family memories.</p>
+                </div>
+                
+                <div class="podcast-player">
+                    <div class="podcast-artwork">
+                        <img src="images/Bob Portrait.jpg" alt="Podcast Artwork" class="podcast-cover">
+                    </div>
+                    <div class="podcast-info">
+                        <h3>Episode 1: From Ohio to Officer</h3>
+                        <p class="podcast-description">
+                            The story begins in Columbus, Ohio, where a young Robert Bartlett answers his country's call to service. 
+                            Follow his journey from civilian life through basic training and Officer Candidate School.
+                        </p>
+                        <div class="podcast-controls">
+                            <button class="play-button" id="play-btn">▶ Play Episode</button>
+                            <div class="podcast-duration">Duration: 45:32</div>
+                        </div>
+                        <div class="audio-player" id="audio-player" style="display: none;">
+                            <audio controls>
+                                <source src="#" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="episode-list">
+                    <h4>All Episodes</h4>
+                    <div class="episode-item">
+                        <div class="episode-number">01</div>
+                        <div class="episode-details">
+                            <h5>From Ohio to Officer</h5>
+                            <p>Induction, basic training, and Officer Candidate School</p>
+                            <span class="episode-duration">45:32</span>
+                        </div>
+                    </div>
+                    <div class="episode-item coming-soon">
+                        <div class="episode-number">02</div>
+                        <div class="episode-details">
+                            <h5>Crossing the Atlantic</h5>
+                            <p>The journey to Europe and landing at Cherbourg</p>
+                            <span class="episode-duration">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="episode-item coming-soon">
+                        <div class="episode-number">03</div>
+                        <div class="episode-details">
+                            <h5>Into Battle</h5>
+                            <p>First combat experiences in Belgium and Holland</p>
+                            <span class="episode-duration">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         
         <footer>
-            <p>WWII Journey Mapper &copy; 2025</p>
+            <p>WWII Journey Mapper &copy; 2025 | Honoring the service of Captain Robert Bartlett and the Greatest Generation</p>
         </footer>
     </div>
 
@@ -90,5 +273,4 @@
     
     <!-- Main application script -->
     <script src="app.js"></script>
-</body>
-</html>
+    <script src="navigation.js"></script>

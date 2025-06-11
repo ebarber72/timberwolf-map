@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'Static site build: No compilation needed. Files are ready.'"
+    "dev": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2"
